@@ -1,32 +1,33 @@
 <template>
-  <section id="skills" class="py-24 px-6 bg-card bg-opacity-30">
+  <section id="skills" class="py-28 px-6" style="background:#0D0D0D;">
     <div class="max-w-6xl mx-auto">
-      <div data-aos="fade-up">
-        <p class="text-purple-400 text-sm font-medium tracking-widest uppercase text-center mb-2">Ce que je maîtrise</p>
-        <h2 class="text-4xl font-bold text-center mb-16">Mes <span class="gradient-text">compétences</span></h2>
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="section-label mb-3">Expertise</p>
+        <div class="section-line"></div>
+        <h2 class="serif text-4xl md:text-5xl" style="color:#E8E2D9;">Mes <em style="color:#C9A96E;">compétences</em></h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div v-for="category in skillCategories" :key="category.title"
-             data-aos="fade-up"
-             class="bg-card border border-white border-opacity-5 rounded-2xl p-8 card-hover">
-          <div class="text-4xl mb-4">{{ category.icon }}</div>
-          <h3 class="text-xl font-bold text-white mb-2">{{ category.title }}</h3>
-          <p class="text-gray-500 text-sm mb-6">{{ category.subtitle }}</p>
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <div v-for="(cat, i) in categories" :key="cat.title"
+             class="card card-lift p-8"
+             data-aos="fade-up" :data-aos-delay="i * 100">
+          <!-- Numéro décoratif -->
+          <div class="mono mb-4" style="font-size:11px; color:#333; letter-spacing:0.12em;">0{{ i + 1 }}</div>
+          <h3 class="serif text-xl mb-1" style="color:#E8E2D9;">{{ cat.title }}</h3>
+          <p class="mono mb-6" style="font-size:11px; color:#555; letter-spacing:0.08em;">{{ cat.sub }}</p>
           <div class="flex flex-wrap">
-            <span v-for="skill in category.skills" :key="skill" class="tag">{{ skill }}</span>
+            <span v-for="s in cat.skills" :key="s" class="pill">{{ s }}</span>
           </div>
         </div>
       </div>
 
-      <!-- Langues -->
-      <div data-aos="fade-up" class="mt-12 bg-card border border-white border-opacity-5 rounded-2xl p-8">
-        <h3 class="text-xl font-bold text-white mb-6 text-center">🌍 Langues</h3>
-        <div class="grid grid-cols-3 gap-6 max-w-lg mx-auto">
+      <!-- Langues — texte, pas drapeaux -->
+      <div class="card p-8" data-aos="fade-up">
+        <h3 class="serif text-xl mb-8 text-center" style="color:#E8E2D9;">Langues</h3>
+        <div class="grid grid-cols-3 gap-6 max-w-md mx-auto">
           <div v-for="lang in languages" :key="lang.name" class="text-center">
-            <div class="text-3xl mb-2">{{ lang.flag }}</div>
-            <div class="text-white font-semibold">{{ lang.name }}</div>
-            <div class="text-purple-400 text-sm">{{ lang.level }}</div>
+            <div class="serif text-2xl font-bold mb-1" style="color:#E8E2D9;">{{ lang.name }}</div>
+            <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:#C9A96E; text-transform:uppercase;">{{ lang.level }}</div>
           </div>
         </div>
       </div>
@@ -35,30 +36,27 @@
 </template>
 
 <script setup>
-const skillCategories = [
+const categories = [
   {
-    icon: '⚙️',
     title: 'Développement',
-    subtitle: 'Backend & Frontend',
-    skills: ['Node.js', 'Express.js', 'Nest.js', 'React.js', 'Vue.js', 'Next.js', 'Angular', 'Symfony', 'Laravel', 'Django', 'Spring Boot']
+    sub: 'Backend & Frontend',
+    skills: ['Node.js', 'Express.js', 'Nest.js', 'React.js', 'Vue.js', 'Next.js', 'Angular', 'Symfony', 'Laravel', 'Django', 'Spring Boot', 'Python', 'PHP', 'Java', 'SQL', 'PL-SQL']
   },
   {
-    icon: '🔄',
     title: 'Agilité & Produit',
-    subtitle: 'Scrum Master & PO',
-    skills: ['Scrum', 'Sprint Planning', 'Backlog Grooming', 'User Stories', 'Daily Stand-up', 'Rétrospective', 'Jira', 'Trello', 'Facilitation']
+    sub: 'Scrum Master & Product Owner',
+    skills: ['Scrum', 'Sprint Planning', 'Backlog Grooming', 'User Stories', 'Daily Stand-up', 'Sprint Review', 'Rétrospective', 'Facilitation', 'Jira', 'Trello']
   },
   {
-    icon: '🛢️',
     title: 'Data & DevOps',
-    subtitle: 'Bases de données & CI/CD',
-    skills: ['MySQL', 'MongoDB', 'Oracle', 'Elasticsearch', 'Docker', 'Jenkins', 'Git', 'Sonar', 'Nexus']
+    sub: 'Bases de données & CI/CD',
+    skills: ['MySQL', 'MongoDB', 'Oracle DB', 'Elasticsearch', 'Docker', 'Jenkins', 'Git', 'Sonar', 'Nexus', 'Vagrant']
   }
 ]
 
 const languages = [
-  { flag: '🇫🇷', name: 'Français', level: 'Courant' },
-  { flag: '🇬🇧', name: 'Anglais', level: 'Courant' },
-  { flag: '🇹🇳', name: 'Arabe', level: 'Natif' },
+  { name: 'Français', level: 'Courant' },
+  { name: 'Anglais', level: 'Courant' },
+  { name: 'Arabe', level: 'Natif' },
 ]
 </script>
