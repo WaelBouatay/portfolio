@@ -24,7 +24,7 @@
 
         <div class="fade-up d3 flex flex-wrap gap-2 justify-center md:justify-start mb-6">
           <span class="pill">💻 Full Stack Dev</span>
-          <span class="pill">🔄 Scrum Master</span>
+          <span class="pill">🎯 Scrum Master</span>
           <span class="pill">📋 Product Owner</span>
         </div>
 
