@@ -30,7 +30,7 @@
 
         <p class="fade-up d4 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0"
            style="color:#64748B;font-size:15.5px;line-height:1.8;">
-          Diplômé d'ESPRIT, certifié <strong style="color:#A5B4FC;font-weight:600;">PSM I & PSPO I</strong>.
+          Diplômé d'ESPRIT, certifié <strong style="color:#A5B4FC;font-weight:600;">PSM  & PSPO </strong>.
           J'allie une expertise technique full stack à une culture produit agile pour livrer des solutions robustes en production.
         </p>
 
@@ -41,7 +41,7 @@
 
         <!-- Liens -->
         <div class="fade-up d6 flex flex-wrap gap-6 justify-center md:justify-start">
-          <a href="https://linkedin.com/in/wael-bouatay" target="_blank"
+          <a href="https://www.linkedin.com/in/wael-bouatay-4a05661b5/" target="_blank"
              class="flex items-center gap-2 transition-colors duration-200"
              style="color:#475569;font-size:13px;text-decoration:none;"
              onmouseover="this.style.color='#818CF8'" onmouseout="this.style.color='#475569'">
@@ -83,12 +83,7 @@
       </div>
     </div>
 
-    <!-- Scroll -->
-    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-       style="text-decoration:none;">
-      <span style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:#334155;text-transform:uppercase;">Scroll</span>
-      <div style="width:1px;height:36px;background:linear-gradient(to bottom,#6C63FF,transparent);"></div>
-    </a>
+
   </section>
 </template>
 
