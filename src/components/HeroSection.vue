@@ -55,7 +55,7 @@
                style="width:280px;height:340px; background:#111;">
             <!-- Remplace src par /photo.jpg quand tu as ta vraie photo -->
             <img
-                src="https://api.dicebear.com/7.x/personas/svg?seed=wael&backgroundColor=1a1a1a"
+                src="/photo.png"
                 alt="Wael Bouatay"
                 style="width:100%;height:100%;object-fit:cover;"
             />
