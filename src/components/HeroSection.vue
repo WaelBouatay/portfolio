@@ -78,17 +78,7 @@
                 style="width:100%;height:100%;object-fit:cover;"
             />
           </div>
-          <!-- Stats flottantes -->
-          <div class="absolute -right-6 top-8 card px-4 py-3 text-center glow"
-               style="min-width:90px;">
-            <div class="display font-extrabold gradient-text" style="font-size:22px;">2+</div>
-            <div style="font-size:10px;color:#64748B;font-weight:500;letter-spacing:0.05em;">ANS EXP.</div>
-          </div>
-          <div class="absolute -left-6 bottom-8 card px-4 py-3 text-center glow"
-               style="min-width:90px;">
-            <div class="display font-extrabold gradient-text" style="font-size:22px;">6+</div>
-            <div style="font-size:10px;color:#64748B;font-weight:500;letter-spacing:0.05em;">CLIENTS</div>
-          </div>
+
         </div>
       </div>
     </div>
