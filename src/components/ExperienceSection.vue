@@ -2,54 +2,58 @@
   <section id="experience" class="py-28 px-6">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16" data-aos="fade-up">
-        <p class="section-label mb-3">Parcours</p>
+        <p class="section-label">Parcours</p>
         <div class="section-line"></div>
-        <h2 class="serif text-4xl md:text-5xl" style="color:#E8E2D9;">Expériences <em style="color:#C9A96E;">pro</em></h2>
+        <h2 class="display text-4xl md:text-5xl font-extrabold" style="color:#E2E8F0;">
+          Expériences <span class="gradient-text">professionnelles</span>
+        </h2>
       </div>
 
-      <div class="space-y-10">
+      <div class="space-y-8">
         <div v-for="(exp, i) in experiences" :key="i"
-             class="card p-8 md:p-10 card-lift" data-aos="fade-up" :data-aos-delay="i * 100">
+             class="card p-8 md:p-10"
+             data-aos="fade-up" :data-aos-delay="i * 100">
 
           <!-- Header -->
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-2">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
             <div>
-              <h3 class="serif text-2xl font-bold mb-1" style="color:#E8E2D9;">{{ exp.title }}</h3>
-              <div class="flex flex-wrap items-center gap-3">
-                <span style="color:#C9A96E; font-weight:500; font-size:15px;">{{ exp.company }}</span>
-                <span v-if="exp.type" class="pill" style="font-size:10px;">{{ exp.type }}</span>
+              <h3 class="display text-2xl font-bold mb-2" style="color:#E2E8F0;">{{ exp.title }}</h3>
+              <div class="flex flex-wrap items-center gap-2">
+                <span style="color:#818CF8;font-weight:600;font-size:15px;">{{ exp.company }}</span>
+                <span v-if="exp.type" class="pill" style="font-size:11px;">{{ exp.type }}</span>
               </div>
             </div>
-            <span class="mono whitespace-nowrap" style="color:#555; font-size:12px; letter-spacing:0.08em;">{{ exp.period }}</span>
+            <span class="pill whitespace-nowrap" style="font-size:12px;align-self:flex-start;">📅 {{ exp.period }}</span>
           </div>
 
-          <p style="color:#666; font-size:14px; line-height:1.8; margin: 16px 0 8px;">{{ exp.description }}</p>
+          <p style="color:#64748B;font-size:14px;line-height:1.85;margin-bottom:8px;">{{ exp.description }}</p>
 
           <!-- Clients -->
-          <div v-if="exp.clients" class="mb-6 mt-2">
-            <span class="mono" style="font-size:11px; color:#555; letter-spacing:0.1em; text-transform:uppercase;">Clients — </span>
-            <span style="color:#aaa; font-size:13px;">{{ exp.clients }}</span>
+          <div v-if="exp.clients" class="mb-6 mt-3 px-4 py-3 rounded-xl"
+               style="background:rgba(129,140,248,0.06);border:1px solid rgba(129,140,248,0.15);">
+            <span style="font-size:12px;font-weight:600;color:#818CF8;letter-spacing:0.05em;">CLIENTS — </span>
+            <span style="font-size:13px;color:#94A3B8;">{{ exp.clients }}</span>
           </div>
 
           <!-- Sections -->
           <div v-for="section in exp.sections" :key="section.title" class="mt-6">
-            <div class="flex items-center gap-3 mb-4">
-              <div style="width:24px;height:1px;background:#C9A96E;flex-shrink:0;"></div>
-              <h4 class="mono" style="font-size:11px; letter-spacing:0.12em; color:#C9A96E; text-transform:uppercase;">
+            <div class="flex items-center gap-3 mb-3">
+              <div style="width:20px;height:2px;background:linear-gradient(90deg,#6C63FF,#C084FC);border-radius:2px;flex-shrink:0;"></div>
+              <h4 style="font-size:11px;font-weight:700;letter-spacing:0.14em;color:#818CF8;text-transform:uppercase;">
                 {{ section.title }}
               </h4>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-2 pl-2">
               <li v-for="item in section.items" :key="item"
-                  style="color:#888; font-size:14px; line-height:1.75; padding-left:16px; position:relative;">
-                <span style="position:absolute;left:0;color:#C9A96E;">›</span>
+                  style="color:#94A3B8;font-size:14px;line-height:1.8;padding-left:14px;position:relative;">
+                <span style="position:absolute;left:0;color:#6C63FF;font-size:16px;line-height:1.5;">›</span>
                 {{ item }}
               </li>
             </ul>
           </div>
 
-          <!-- Technologies -->
-          <div class="flex flex-wrap mt-8 pt-6" style="border-top: 1px solid rgba(255,255,255,0.06);">
+          <!-- Techs -->
+          <div class="flex flex-wrap mt-8 pt-6" style="border-top:1px solid rgba(255,255,255,0.05);">
             <span v-for="t in exp.techs" :key="t" class="pill">{{ t }}</span>
           </div>
         </div>
@@ -90,7 +94,7 @@ const experiences = [
         ]
       }
     ],
-    techs: ['Node.js', 'Express.js', 'React.js', 'Vue.js', 'MongoDB', 'MySQL', 'Docker', 'Scrum', 'Jira']
+    techs: ['Node.js','Express.js','React.js','Vue.js','MongoDB','MySQL','Docker','Scrum','Jira']
   },
   {
     title: "Ingénieur Full Stack — Stage de fin d'études",
@@ -120,7 +124,7 @@ const experiences = [
         ]
       }
     ],
-    techs: ['Symfony 6', 'React.js', 'Python', 'Elasticsearch', 'Docker', 'Jenkins', 'MySQL', 'Scrum', 'Jira']
+    techs: ['Symfony 6','React.js','Python','Elasticsearch','Docker','Jenkins','MySQL','Scrum','Jira']
   }
 ]
 </script>

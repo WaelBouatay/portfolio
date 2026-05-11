@@ -1,78 +1,107 @@
 <template>
-  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden px-6 pt-24 pb-16">
-    <!-- Grain texture -->
-    <div class="absolute inset-0 opacity-30" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%220.4%22/%3E%3C/svg%3E'); background-size: 200px;"></div>
-    <!-- Ligne décorative verticale -->
-    <div class="absolute left-12 top-24 bottom-0 w-px hidden lg:block" style="background: linear-gradient(to bottom, #C9A96E, transparent); opacity: 0.3;"></div>
+  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden px-6 pt-28 pb-16">
+    <!-- Blobs décoratifs -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute rounded-full"
+           style="width:600px;height:600px;top:-100px;left:-150px;background:radial-gradient(circle,rgba(108,99,255,0.12) 0%,transparent 70%);"></div>
+      <div class="absolute rounded-full"
+           style="width:500px;height:500px;bottom:-80px;right:-100px;background:radial-gradient(circle,rgba(192,132,252,0.1) 0%,transparent 70%);"></div>
+    </div>
 
-    <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center gap-16 z-10">
+    <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center gap-12 z-10">
       <!-- TEXTE -->
       <div class="flex-1 text-center md:text-left">
-        <p class="section-label fade-up delay-1 mb-4">Ingénieur Informatique</p>
-        <h1 class="serif fade-up delay-2 mb-2 leading-none"
-            style="font-size: clamp(3.5rem, 9vw, 7rem); font-weight: 900; color: #E8E2D9;">
-          Wael<br/><span class="gold-text">Bouatay</span>
-        </h1>
-
-        <div class="fade-up delay-3 flex flex-wrap gap-2 justify-center md:justify-start my-6">
-          <span class="pill">Full Stack Dev</span>
-          <span class="pill">Scrum Master</span>
-          <span class="pill">Product Owner</span>
+        <div class="fade-up d1 inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+             style="background:rgba(129,140,248,0.08);border:1px solid rgba(129,140,248,0.2);">
+          <span style="width:7px;height:7px;border-radius:50%;background:#6C63FF;display:inline-block;"></span>
+          <span style="font-size:12px;font-weight:600;color:#818CF8;letter-spacing:0.1em;text-transform:uppercase;">Disponible</span>
         </div>
 
-        <p class="fade-up delay-4 leading-relaxed mb-8 max-w-lg mx-auto md:mx-0"
-           style="color: #888; font-size: 16px;">
-          Diplômé d'ESPRIT, certifié PSM I & PSPO I. J'allie une expertise technique full stack à une culture produit agile pour livrer des solutions robustes en production.
+        <h1 class="display fade-up d2 leading-none mb-4"
+            style="font-size:clamp(3.2rem,9vw,6.5rem);font-weight:800;color:#E2E8F0;">
+          Wael<br/><span class="gradient-text">Bouatay</span>
+        </h1>
+
+        <div class="fade-up d3 flex flex-wrap gap-2 justify-center md:justify-start mb-6">
+          <span class="pill">💻 Full Stack Dev</span>
+          <span class="pill">🔄 Scrum Master</span>
+          <span class="pill">📋 Product Owner</span>
+        </div>
+
+        <p class="fade-up d4 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0"
+           style="color:#64748B;font-size:15.5px;line-height:1.8;">
+          Diplômé d'ESPRIT, certifié <strong style="color:#A5B4FC;font-weight:600;">PSM I & PSPO I</strong>.
+          J'allie une expertise technique full stack à une culture produit agile pour livrer des solutions robustes en production.
         </p>
 
-        <div class="fade-up delay-5 flex flex-wrap gap-4 justify-center md:justify-start">
+        <div class="fade-up d5 flex flex-wrap gap-4 justify-center md:justify-start mb-10">
           <a href="#contact" class="btn-primary">Me contacter</a>
           <a href="#experience" class="btn-outline">Mon parcours</a>
         </div>
 
-        <!-- Liens sociaux -->
-        <div class="fade-up delay-5 flex gap-6 mt-10 justify-center md:justify-start">
+        <!-- Liens -->
+        <div class="fade-up d6 flex flex-wrap gap-6 justify-center md:justify-start">
           <a href="https://linkedin.com/in/wael-bouatay" target="_blank"
-             style="color:#555; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:color 0.2s;"
-             onmouseover="this.style.color='#C9A96E'" onmouseout="this.style.color='#555'">
-            LinkedIn ↗
+             class="flex items-center gap-2 transition-colors duration-200"
+             style="color:#475569;font-size:13px;text-decoration:none;"
+             onmouseover="this.style.color='#818CF8'" onmouseout="this.style.color='#475569'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
           </a>
           <a href="mailto:wael.bouatay@gmail.com"
-             style="color:#555; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:color 0.2s;"
-             onmouseover="this.style.color='#C9A96E'" onmouseout="this.style.color='#555'">
-            wael.bouatay@gmail.com ↗
+             class="flex items-center gap-2 transition-colors duration-200"
+             style="color:#475569;font-size:13px;text-decoration:none;"
+             onmouseover="this.style.color='#818CF8'" onmouseout="this.style.color='#475569'">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            wael.bouatay@gmail.com
           </a>
         </div>
       </div>
 
       <!-- PHOTO -->
-      <div class="flex-shrink-0 fade-up delay-3">
+      <div class="flex-shrink-0 fade-up d3">
         <div class="relative">
-          <!-- Cadre décoratif décalé -->
-          <div class="absolute rounded-2xl"
-               style="width:100%;height:100%;top:12px;left:12px;border:1px solid rgba(201,169,110,0.3);border-radius:16px;"></div>
-          <div class="relative overflow-hidden rounded-2xl"
-               style="width:280px;height:340px; background:#111;">
-            <!-- Remplace src par /photo.jpg quand tu as ta vraie photo -->
+          <!-- Cercle décoratif tournant -->
+          <div class="absolute inset-0 rounded-full"
+               style="background:conic-gradient(from 0deg,#6C63FF,#C084FC,#6C63FF);padding:3px;border-radius:50%;animation:spin 8s linear infinite;">
+            <div style="width:100%;height:100%;border-radius:50%;background:#080B14;"></div>
+          </div>
+          <div class="relative overflow-hidden"
+               style="width:260px;height:260px;border-radius:50%;border:3px solid transparent;background:linear-gradient(#080B14,#080B14) padding-box,linear-gradient(135deg,#6C63FF,#C084FC) border-box;">
             <img
                 src="/photo.png"
                 alt="Wael Bouatay"
                 style="width:100%;height:100%;object-fit:cover;"
             />
-            <!-- Overlay subtil -->
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 50%);"></div>
           </div>
-          <!-- Numéro décoratif -->
-          <div class="absolute -top-4 -right-4 mono text-xs" style="color:#C9A96E; opacity:0.6;">01</div>
+          <!-- Stats flottantes -->
+          <div class="absolute -right-6 top-8 card px-4 py-3 text-center glow"
+               style="min-width:90px;">
+            <div class="display font-extrabold gradient-text" style="font-size:22px;">2+</div>
+            <div style="font-size:10px;color:#64748B;font-weight:500;letter-spacing:0.05em;">ANS EXP.</div>
+          </div>
+          <div class="absolute -left-6 bottom-8 card px-4 py-3 text-center glow"
+               style="min-width:90px;">
+            <div class="display font-extrabold gradient-text" style="font-size:22px;">6+</div>
+            <div style="font-size:10px;color:#64748B;font-weight:500;letter-spacing:0.05em;">CLIENTS</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Scroll indicator -->
+    <!-- Scroll -->
     <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-       style="color:#444; text-decoration:none;">
-      <span class="mono" style="font-size:10px;letter-spacing:0.1em;">SCROLL</span>
-      <div style="width:1px;height:40px;background:linear-gradient(to bottom,#C9A96E,transparent);"></div>
+       style="text-decoration:none;">
+      <span style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:#334155;text-transform:uppercase;">Scroll</span>
+      <div style="width:1px;height:36px;background:linear-gradient(to bottom,#6C63FF,transparent);"></div>
     </a>
   </section>
 </template>
+
+<style scoped>
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
