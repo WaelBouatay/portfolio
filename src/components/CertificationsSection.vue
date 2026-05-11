@@ -61,7 +61,7 @@ const certifications = [
     title: 'Professional Scrum Master (PSM I)',
     description: "Certification internationale validant la maîtrise du framework Scrum et des pratiques de facilitation d'équipes agiles.",
     year: '2025',
-    link: 'https://www.scrum.org/certificates/1'
+    link: 'https://www.scrum.org/user/1502729'
   },
   {
     icon: '🏅',
@@ -69,7 +69,7 @@ const certifications = [
     title: 'Professional Scrum Product Owner (PSPO I)',
     description: "Certification validant la maîtrise du rôle de Product Owner, de la gestion du backlog et de la maximisation de la valeur produit.",
     year: '2025',
-    link: 'https://www.scrum.org/certificates/1'
+    link: 'https://www.scrum.org/user/1502729'
   },
   {
     icon: '📊',
@@ -77,7 +77,7 @@ const certifications = [
     title: 'Initiating and Planning Projects',
     description: "Fondamentaux de la gestion de projet : initialisation, planification, définition des objectifs et livrables.",
     year: '2020',
-    link: 'https://www.coursera.org/account/accomplishments'
+    link: 'https://www.coursera.org/account/accomplishments/certificate/WDR4VRJ2DXR7'
   },
   {
     icon: '🗄️',
@@ -85,7 +85,7 @@ const certifications = [
     title: 'SQL for Data Science',
     description: "Maîtrise du SQL appliqué à l'analyse de données, requêtes avancées et manipulation de bases de données.",
     year: '2020',
-    link: 'https://www.coursera.org/account/accomplishments'
+    link: 'https://www.coursera.org/account/accomplishments/certificate/NJP5F49R9KET'
   },
 ]
 </script>

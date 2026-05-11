@@ -40,8 +40,8 @@
 <script setup>
 const contactInfos = [
   { icon: '✉️', label: 'Email',        value: 'wael.bouatay@gmail.com',       href: 'mailto:wael.bouatay@gmail.com' },
-  { icon: '📱', label: 'Téléphone',    value: '+216 99 00 55 41',             href: 'tel:+21699005541' },
-  { icon: '💼', label: 'LinkedIn',     value: 'linkedin.com/in/wael-bouatay', href: 'https://linkedin.com/in/wael-bouatay' },
+  { icon: '📱', label: 'Téléphone',    value: '+216 99 00 55 41',             href: '#' },
+  { icon: '💼', label: 'LinkedIn',     value: 'https://www.linkedin.com/in/wael-bouatay-4a05661b5/', href: 'https://www.linkedin.com/in/wael-bouatay-4a05661b5/' },
   { icon: '📍', label: 'Localisation', value: 'Tunisie',                      href: '#' },
 ]
 </script>
